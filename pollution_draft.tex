@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+
+% set margins and spacing
+\addtolength{\textwidth}{1.3in}
+\addtolength{\oddsidemargin}{-.65in} %left margin
+\addtolength{\evensidemargin}{-.65in}
+\setlength{\textheight}{9in}
+\setlength{\topmargin}{-.5in}
+\setlength{\headheight}{0.0in}
+\setlength{\footskip}{.375in}
+\renewcommand{\baselinestretch}{1.0}
+\linespread{1.0}
+
+% load miscellaneous packages
+\usepackage{csquotes}
+\usepackage[american]{babel}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{graphicx,amsbsy,amssymb, amsmath, amsthm, MnSymbol,bbding,times, verbatim,bm,pifont,pdfsync,setspace,natbib}
+
+% enable hyperlinks and table of contents
+\usepackage[pdftex,
+bookmarks=true,
+bookmarksnumbered=false,
+pdfview=fitH,
+bookmarksopen=true,hyperfootnotes=false]{hyperref}
+
+% define environments
+\newtheorem{definition}{Definition}
+\newtheorem{fact}{Fact}
+\newtheorem{result}{Result}
+\newtheorem{proposition}{Proposition}
+
+
+
+\begin{document}
+\title{Interactions of Randomized EPA and OSHA Inspections on Worker Safety}
+\author{Dylan Eldred\thanks{Syracuse University, Economics Department. Email: deldred@syr.edu.} \and Carmen Carrión-Flores\thanks{Syracuse University, Economics Department. Email: cecarrio@syr.edu}}
+\date{\vskip-.1in \today}
+\maketitle
+
+\vskip.3in
+\begin{center} {\bf Abstract} \end{center}
+
+\begin{quote}
+{\small Insert abstract text here: 75-200 word, very high-level summary of your project.}
+\end{quote}
+
+\section{Introduction} \label{intro}
+
+\section{Structural Model} \label{smodel}
+\begin{equation} \label{eq:1} %Volume of Emissions
+    Q_{it} = a_{qit} + b_qCe_{it} +c_qIe_{it}+ \epsilon_{qit}
+\end{equation}
+\begin{equation}\label{eq:2} %Number of Accidents
+    A_{it} = a_{ait}+ b_aCo_{it-1}+c_aIo_{it}+d_aX_{ait}+\epsilon_{ait}
+\end{equation}
+\begin{equation}\label{eq:3} %Production of EPA Compliance
+    Ce_{it} = a_{ceit} + b_{ce}Ce_{it-1}+c_{ce}Ie_{it}+d_{ce}X_{ceit}+ f_{ce}Co_{it}+g_{ce}Pe_{it}+ \epsilon_{ceit}
+\end{equation}
+\begin{equation}\label{eq:4} %Production of OSHA Compliance
+    Co_{it} = a_{coit} + b_{co}Co_{it-1}+c_{co}Io_{it}+d_{co}X_{coit}+ f_{co}Ce_{it}+g_{co}Po_{it}+ \epsilon_{coit}
+\end{equation}
+The four equations above represent the parameters of interest we solve for in our structural model. Our outcomes include volume of emissions (\ref{eq:1}), number of accidents in industry i at time t (\ref{eq:2}), the production of EPA compliance (\ref{eq:3}), and the production of OSHA compliance (\ref{eq:4}). In each equation, $X$represent vectors of observable control variables. %Specify these later. Depends on data
+The error terms, $\epsilon$, are assumed to be normal and distributed independently. 
+\par
+Equation \ref{eq:1} indicates that variation in emissions volume is a function of EPA compliance and history of EPA inspections. %Should inspections be a lag variable? 
+\par
+Equation \ref{eq:2} represents number of accidents as a function of OSHA compliance, $Co_{it}$, and previous inspection history, $Io_{it}$.
+\par
+Equation \ref{eq:3} relates the production of EPA compliance with EPA compliance in the previous period, $Ce_{it-1}$, previous inspection history, $Ie_{it}$, production of OSHA compliance, and number of environmental patents in industry i at time t. 
+\par
+Equation \ref{eq:4} indicates production of OSHA compliance is dependent on OSHA compliance in the previous period, $Co_{it}$, previous inspection history, production of EPA compliance, and number of workplace safety patents in industry i at time t, $Po_{it}$. %Paten variable is here as a placeholder. Unsure if it'll be ultimately included. This is more difficult to observe compared to environmental patents 
+\section{Crossed Effects Analysis} \label{cross_ef}
+
+\section{Data}\label{data}
+
+\section{Econometric Methods} \label{emodel}
+
+\section{Results} \label{results}
+
+\section{Conclusion} \label{conclusion}
+
+
+\end{document}
